@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Header Section */
+header {
+    background-color: #0a57d1;
+    color: white;
+    padding: 20px;
+}
+
+.btn-primary {
+    background-color: white;
+    color: #0a57d1;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Report Section */
+.report-section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.report-section textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.report-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-secondary {
+    background-color: #0a57d1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 300px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Latest News */
+.latest-news {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.news-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.news-card {
+    background-color: white;
+    padding: 15px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.breaking-news { border-left: 5px solid red; }
+.update { border-left: 5px solid green; }
+.community { border-left: 5px solid blue; }
+
+/* Community Resources */
+.resources {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.resource-card {
+    background-color: white;
+    padding: 15px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
