@@ -3,35 +3,89 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
     text-align: center;
+    background: linear-gradient(-45deg, #f7bb89, #e5fce7, #f9afc3fa, #77c2f4);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: rgb(20, 2, 2);
+}
+
+/* Background Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Header Section */
 header {
-    background-color: #0a57d1;
-    color: white;
+    background-color: #d3b2f0;
+    color: rgb(4, 0, 0);
     padding: 20px;
+    border-bottom: 3px solid white;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary, .btn-submit {
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-primary {
     background-color: white;
     color: #0a57d1;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
 }
+
+.btn-primary:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    background-color: #0a57d1;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #a4081f;
+    transform: scale(1.05);
+}
+
+.btn-submit {
+    background-color: red;
+    color: white;
+    width: auto;
+}
+
+.btn-submit:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+/*.btn-additional{
+    background-color: #f0f0f0;
+    color: black;
+    width:auto;
+}*/
 
 /* Report Section */
 .report-section {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    margin: 20px auto;
+    margin: 10px auto;
     width: 60%;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.report-section:hover {
+    transform: translateY(-5px);
 }
 
 .report-section textarea {
@@ -41,71 +95,82 @@ header {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
 }
 
-.report-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.btn-secondary {
-    background-color: #0a57d1;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.btn-submit {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 300px;
-    font-size: 16px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Latest News */
-.latest-news {
+/* News & Resources */
+.additional-features, .resources {
     margin: 20px auto;
     width: 80%;
+   /* background:rgb(218, 11, 11)*/
 }
 
-.news-container {
+.news-container, .resources {
     display: flex;
     justify-content: space-around;
     gap: 15px;
+    /*background: rgb(11, 166, 218)*/
+    /*background: linear-gradient(-45deg, #8514e8, #c71ef6, #59098f, #eb7cde);*/
 }
 
-.news-card {
-    background-color: white;
+.news-card, .resource-card {
+    background: #afa4eeb9;
     padding: 15px;
     width: 30%;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.breaking-news { border-left: 5px solid red; }
+.news-card:hover, .resource-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Left Borders */
+.breaking-news { border-left: 5px solid rgb(255, 72, 0); }
 .update { border-left: 5px solid green; }
 .community { border-left: 5px solid blue; }
+.forum { border-left: 5px solid rgb(218, 11, 11); }
+.safety-resource { border-left: 5px solid green; }
+.emergency-contact { border-left: 5px solid blue; }
 
-/* Community Resources */
-.resources {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px auto;
-    width: 80%;
+/* Fade-in and Slide Animation */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.resource-card {
-    background-color: white;
-    padding: 15px;
-    width: 30%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.report-section, .news-card, .resource-card {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .report-section {
+        width: 80%;
+    }
+
+    .news-container, .resources {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-card, .resource-card {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .report-section {
+        width: 90%;
+    }
 }
