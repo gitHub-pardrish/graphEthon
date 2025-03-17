@@ -3,49 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Helpline</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Emergency Contacts</title>
+    <link rel="stylesheet" href="emergency_style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </head>
 <body>
 
-    <header>
-        <h1>Emergency Helpline Numbers</h1>
-        <p>Find essential government emergency contact numbers below.</p>
-        <a href="index.html" class="btn-primary">Back to Home</a>
+    <!-- Header Section -->
+    <header class="emergency-header">
+        <h1>Emergency Contacts</h1>
+        <p>Quick access to emergency services and important contact information for your community.</p>
+       <!-- <button class="btn-primary">Save Contacts</button>-->
     </header>
 
-    <section class="helpline-section">
-        <div class="helpline-card">
-            <h3>🚔 Police Helpline</h3>
-            <p>Call for any law enforcement assistance.</p>
-            <button class="btn-call" onclick="callHelpline('100')">Call 100</button>
-        </div>
-
-        <div class="helpline-card">
-            <h3>🔥 Fire Department</h3>
-            <p>Contact the fire brigade in case of emergencies.</p>
-            <button class="btn-call" onclick="callHelpline('101')">Call 101</button>
-        </div>
-
-        <div class="helpline-card">
-            <h3>🚑 Medical Emergency</h3>
-            <p>For ambulance and urgent medical help.</p>
-            <button class="btn-call" onclick="callHelpline('102')">Call 102</button>
-        </div>
-
-        <div class="helpline-card">
-            <h3>👩‍🦰 Women Helpline</h3>
-            <p>Support for women in distress.</p>
-            <button class="btn-call" onclick="callHelpline('1091')">Call 1091</button>
+    <!-- National Emergency Numbers -->
+    <section class="emergency-section">
+        <h2>National Emergency Numbers</h2>
+        <div class="emergency-cards">
+            <div class="card red">
+                <h3>National Emergency Services</h3>
+                <p>Get assistance during various emergencies</p>
+                <h2>112</h2>
+                <button class="call-btn">📞 Call Now</button>
+            </div>
+            <div class="card blue">
+                <h3>Police</h3>
+                <p>Get emergency help from a nearby police station.</p>
+                <h2>100</h2>
+                <button class="call-btn">📞 Call Now</button>
+            </div>
+            <div class="card purple">
+                <h3>Ambulance</h3>
+                <p>Get help from a nearby hospital</p>
+                <h2>108</h2>
+                <button class="call-btn">📞 Call Now</button>
+            </div>
         </div>
     </section>
 
-    <script>
-        function callHelpline(number) {
-            alert("Dialing " + number + "...");
-            window.location.href = "tel:" + number;
-        }
-    </script>
+    <!-- Local Emergency Contacts -->
+<section class="local-contacts">
+    <h2>Local Emergency Contacts</h2>
+    <input type="text" class="search-bar" placeholder="Search local contacts...">
 
-</body>
-</html>
+    <div class="contact-list">
+        <div class="contact-item">
+            <div class="contact-info">
+                <span class="contact-name">Child Abuse Helpline</span>
+                <span class="contact-number">1098</span>
+                <i class="fas fa-phone call-icon"></i>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-info">
+                <span class="contact-name">Women Helpline (Domestic Abuse)</span>
+                <span class="contact-number">181</span>
+                <i class="fas fa-phone call-icon"></i>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-info">
+                <span class="contact-name">Fire Department</span>
+                <span class="contact-number">101</span>
+                <i class="fas fa-phone call-icon"></i>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-info">
+                <span class="contact-name">Disaster Management</span>
+                <span class="contact-number">1070</span>
+                <i class="fas fa-phone call-icon"></i>
+            </div>
+        </div>
+    </div>
+</section>
