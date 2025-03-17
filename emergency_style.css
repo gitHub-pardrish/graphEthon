@@ -1,0 +1,136 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fce5f6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.emergency-header {
+    background-color: #1e3aff;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.emergency-header h1 {
+    font-size: 28px;
+}
+
+.emergency-header p {
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color: white;
+    color: #1e3aff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Emergency Section */
+.emergency-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.emergency-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.red { background-color: #ff4d4d; }
+.blue { background-color: #007bff; }
+.purple { background-color: #a64dff; }
+
+.call-btn {
+    width: 100%;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Local Emergency Contacts */
+.local-contacts {
+    background: white;
+    padding: 20px;
+    width: 60%;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Contact List */
+.contact-list {
+    margin-top: 20px;
+}
+
+.contact-item {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fce5f6;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contact-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.contact-number {
+    font-size: 18px;
+    color: #007bff;
+    text-align: center;
+    min-width: 70px; 
+}
+
+.call-icon {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 22px;
+    margin-left: 15px;
+}
