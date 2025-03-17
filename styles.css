@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    background: linear-gradient(-45deg, #f7bb89, #e5fce7, #f9afc3fa, #77c2f4);
+    background: linear-gradient(-45deg, #dbf5f3, #e5fce7, #d8f9e1fa, #deebf4);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     color: rgb(20, 2, 2);
